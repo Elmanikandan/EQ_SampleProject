@@ -1,0 +1,6 @@
+git init
+git add -A
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/Elmanikandan/EQ_SampleProject.git
+git push -u origin master
