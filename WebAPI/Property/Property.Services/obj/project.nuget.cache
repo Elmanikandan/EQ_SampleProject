@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "H2pYqXCvAFjTozURargPFfn55U2JbHlxwzdRLpQQfRoims3uQF8Ul8a17Q7bb/pAANkvH7iWGVyxhyLQfmjzVA==",
+  "dgSpecHash": "rY4UIsLZRh+sgxGLZXuUswKywwAjJ0IijBQjJDc/G2E1MjX+NVHY+ZUiLM0iIFhriEQaYXh4L+zMoHfonRVkrw==",
   "success": true,
-  "projectFilePath": "C:\\Training\\LPS\\Property\\Property.Services\\Property.Services.csproj",
+  "projectFilePath": "C:\\Users\\ElumalM\\Documents\\GitHub\\EQ_SampleProject\\WebAPI\\Property\\Property.Services\\Property.Services.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ElumalM\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\ElumalM\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

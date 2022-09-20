@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Training\\LPS\\Property\\Property.Services\\Property.Services.csproj": {}
+    "C:\\Users\\ElumalM\\Documents\\GitHub\\EQ_SampleProject\\WebAPI\\Property\\Property.Services\\Property.Services.csproj": {}
   },
   "projects": {
-    "C:\\Training\\LPS\\Property\\Property.Services\\Property.Services.csproj": {
+    "C:\\Users\\ElumalM\\Documents\\GitHub\\EQ_SampleProject\\WebAPI\\Property\\Property.Services\\Property.Services.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Training\\LPS\\Property\\Property.Services\\Property.Services.csproj",
+        "projectUniqueName": "C:\\Users\\ElumalM\\Documents\\GitHub\\EQ_SampleProject\\WebAPI\\Property\\Property.Services\\Property.Services.csproj",
         "projectName": "Property.Services",
-        "projectPath": "C:\\Training\\LPS\\Property\\Property.Services\\Property.Services.csproj",
+        "projectPath": "C:\\Users\\ElumalM\\Documents\\GitHub\\EQ_SampleProject\\WebAPI\\Property\\Property.Services\\Property.Services.csproj",
         "packagesPath": "C:\\Users\\ElumalM\\.nuget\\packages\\",
-        "outputPath": "C:\\Training\\LPS\\Property\\Property.Services\\obj\\",
+        "outputPath": "C:\\Users\\ElumalM\\Documents\\GitHub\\EQ_SampleProject\\WebAPI\\Property\\Property.Services\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ElumalM\\AppData\\Roaming\\NuGet\\NuGet.Config",
