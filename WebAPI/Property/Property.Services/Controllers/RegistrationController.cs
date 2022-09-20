@@ -9,42 +9,48 @@ namespace Property.Services.Controllers
     [ApiController]
     public class RegistrationController : ControllerBase
     {
-        private IRegistrationRepository _registrationRepository;
+        private IUnitOfWork _unitOfWork;
 
-        public RegistrationController(IRegistrationRepository registrationRepository)
+        public RegistrationController(IUnitOfWork unitOfWork)
         {
            
-            _registrationRepository = registrationRepository;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet]
         public IEnumerable<Registration> GetUser()
         {
-            return _registrationRepository.GetAllUser().ToList();
+            return _unitOfWork.Registration.GetAll().ToList();
         }
 
         [HttpGet("{id}")]
         public Registration GetUserById(int id)
         {
-            return _registrationRepository.GetUserById(id);
+            return _unitOfWork.Registration.GetFirstOrDefault(u=>u.Id==id);
         }
 
         [HttpPost]
         public Registration Create([FromBody] Registration registration)
         {
-            return _registrationRepository.AddUser(registration);
+            _unitOfWork.Registration.Add(registration);
+            _unitOfWork.Save();
+            return registration;
         }
 
         [HttpPut]
         public Registration Update([FromForm] Registration registration)
         {
-            return _registrationRepository.UpdateUser(registration);
+            _unitOfWork.Registration.Update(registration);
+            _unitOfWork.Save();
+            return registration;
         }
 
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            _registrationRepository.DeleteUser(id);
+            var obj = _unitOfWork.Registration.GetFirstOrDefault(u=>u.Id == id);
+            _unitOfWork.Registration.Remove(obj);
+            _unitOfWork.Save();
         }
     }
 }

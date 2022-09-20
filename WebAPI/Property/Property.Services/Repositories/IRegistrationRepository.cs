@@ -2,12 +2,8 @@
 
 namespace Property.Services.Repositories
 {
-    public interface IRegistrationRepository
+    public interface IRegistrationRepository : IRepository<Registration>
     {
-        IEnumerable<Registration> GetAllUser();
-        Registration GetUserById(int id);
-        Registration AddUser(Registration user);
-        Registration UpdateUser(Registration user);
-        void DeleteUser(int id);
+        void Update(Registration user);
     }
 }

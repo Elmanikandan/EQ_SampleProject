@@ -9,42 +9,48 @@ namespace Property.Services.Controllers
     [ApiController]
     public class PropertiesController : ControllerBase
     {
-        private IPropertiesRepository _propertiesRepository;
+        private IUnitOfWork _unitOfWork;
 
-        public PropertiesController(IPropertiesRepository propertiesRepository)
+        public PropertiesController(IUnitOfWork unitOfWork)
         {
 
-            _propertiesRepository = propertiesRepository;
+            _unitOfWork = unitOfWork;
         }
 
         [HttpGet]
         public IEnumerable<Properties> GetProperties()
         {
-            return _propertiesRepository.GetAllProperty().ToList();
+            return _unitOfWork.Properties.GetAll().ToList();
         }
 
         [HttpGet("{id}")]
         public Properties GetPropertyById(int id)
         {
-            return _propertiesRepository.GetPropertyById(id);
+            return _unitOfWork.Properties.GetFirstOrDefault(x=>x.Id==id);
         }
 
         [HttpPost]
         public Properties Create([FromBody] Properties registration)
         {
-            return _propertiesRepository.AddProperty(registration);
+            _unitOfWork.Properties.Add(registration);
+            _unitOfWork.Save();
+            return registration;
         }
 
         [HttpPut]
         public Properties Update([FromForm] Properties registration)
         {
-            return _propertiesRepository.UpdateProperty(registration);
+            _unitOfWork.Properties.Update(registration);
+            _unitOfWork.Save();
+            return registration;
         }
 
         [HttpDelete("{id}")]
         public void Delete(int id)
         {
-            _propertiesRepository.DeleteProperty(id);
+            var obj = _unitOfWork.Properties.GetFirstOrDefault(u => u.Id == id);
+            _unitOfWork.Properties.Remove(obj);
+            _unitOfWork.Save();
         }
     }
 }

@@ -8,8 +8,11 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddTransient<IRegistrationRepository, RegistrationRepository>();
-builder.Services.AddTransient<IPropertiesRepository, PropertiesRepository>();
+//builder.Services.AddScoped<IRegistrationRepository, RegistrationRepository>();
+//builder.Services.AddScoped<IPropertiesRepository, PropertiesRepository>();
+
+builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+
 
 builder.Services.AddDbContext<AppDbContext>(options => options.UseSqlServer(
         builder.Configuration.GetConnectionString("PropertyConnection")
