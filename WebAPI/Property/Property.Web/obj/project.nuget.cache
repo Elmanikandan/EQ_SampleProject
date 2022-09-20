@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "TmIc7s6aYo5ZkHdinvchpbAW5O6yRNHcOuDQZbrwjBvWEkSj4Q5hLd8OkYobDdUXYAkrLc+xPtNaLAZ43iKQPg==",
+  "success": true,
+  "projectFilePath": "C:\\Work\\Tranining\\Sample Projects\\EQ_SampleProject\\WebAPI\\Property\\Property.Web\\Property.Web.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kothanj\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
