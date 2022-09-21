@@ -39,7 +39,8 @@ namespace Property.Web.Services
             {
                 var httpResponse = await client.DeleteAsync(url);
                 var result = await httpResponse.Content.ReadAsStringAsync();
-                response = JsonConvert.DeserializeObject<ApiResponseModel<RegistrationModel>>(result);
+                var reponseData = JsonConvert.DeserializeObject<RegistrationModel>(result);
+                response = new ApiResponseModel<RegistrationModel> { ResponseCode = HttpStatusCode.OK, Message = reponseData.Type + " deleted successfully", Record = reponseData };
             }
             return response;
         }
@@ -87,7 +88,7 @@ namespace Property.Web.Services
             {
                 var httpResponse = await client.PutAsJsonAsync<RegistrationModel>(registrationApiUrl, registration);
                 var result = await httpResponse.Content.ReadAsStringAsync();
-                response = JsonConvert.DeserializeObject<ApiResponseModel<RegistrationModel>>(result);
+                response = new ApiResponseModel<RegistrationModel> { ResponseCode = HttpStatusCode.OK, Message = registration.Type+ " updated successfully", Record = registration };
             }
             return response;
         }

@@ -59,7 +59,7 @@ namespace Property.Web.Controllers
                 var response = await unitOfWork.RegistrationService.GetAsync(id.Value);
                 if (response.ResponseCode == System.Net.HttpStatusCode.Found)
                 {
-                    TempData["success"] = response.Message;
+                    //TempData["success"] = response.Message;
                     RegistrationViewModel registrationView = new RegistrationViewModel();
                     registrationView.Registration = response.Record;
                     return View("Create", registrationView);
@@ -71,11 +71,51 @@ namespace Property.Web.Controllers
                 }
             }
         }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public async Task<IActionResult> Edit(RegistrationModel registration)
+        {
+            if (!ModelState.IsValid)
+            {
+                return View(registration);
+            }
+            var response = await unitOfWork.RegistrationService.UpdateAsync(registration);
+            if (response.ResponseCode == System.Net.HttpStatusCode.OK)
+            {
+                TempData["success"] = response.Message;
+                return RedirectToAction("Index");
+            }
+            else
+            {
+                TempData["error"] = response.Message;
+                return View(registration);
+            }
+        }
+
         [HttpGet]
         public async Task<ActionResult> GetAll()
         {
             var response = await unitOfWork.RegistrationService.GetAllAsync();
             return Json(new { data = response.Record });
+        }
+        [HttpDelete]
+        public async Task<IActionResult> DeleteRecord(int id)
+        {
+            var result = await unitOfWork.RegistrationService.GetAsync(id);
+            if (result == null || result.Record == null)
+            {
+                return Json(new { success = false, message = result.Message });
+            }
+            var response = await unitOfWork.RegistrationService.DeleteAsync(id);
+            if (response.ResponseCode == System.Net.HttpStatusCode.OK)
+            {                
+                return Json(new { success = true, message = response.Message });
+            }
+            else
+            {
+                return Json(new { success = false, message = response.Message });
+            }
+
         }
     }
 }
