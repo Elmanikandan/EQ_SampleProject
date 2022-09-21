@@ -1,6 +1,76 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model IEnumerable<RegistrationModel>
 @{
+    ViewData["Title"] = "Registration Page";
 }
-<p>test</p>
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Registration List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a class="btn btn-primary" asp-controller="Registration" asp-action="Create">
+                <i class="bi bi-plus-circle-fill"></i>&nbsp;&nbsp;Create New
+            </a>
+        </div>
+    </div>
+
+    <br />
+    <br />
+    <table class="table table-bordered table-striped" style="width:100%" id="tblRegistrationData">
+        <thead>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Address
+                </th>
+                <th>
+                    City
+                </th>
+                <th>
+                    Mobile No
+                </th>
+                <th>
+                    Email Id
+                </th>
+                <th>
+                    Type
+                </th>
+                <th>
+                    Edit
+                </th>
+                <th>
+                    Delete
+                </th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var c in Model)
+            {
+                <tr>
+                    <td style="width:50%">@c.Name</td>
+                    <td style="width:30%">@c.Address</td>
+                    <td style="width:30%">@c.City</td>
+                    <td style="width:30%">@c.MobileNumber</td>
+                    <td style="width:30%">@c.Email</td>
+                    <td style="width:30%">@c.Type</td>
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                            <a class="btn btn-primary mx-2" asp-action="Edit" asp-controller="Registration" asp-route-id="@c.Id"> Edit
+                            </a>
+                        </div>
+                    </td>
+                    <td>
+                        <div class="w-75 btn-group" role="group">
+                            <a class="btn btn-danger mx-2" asp-action="Delete" asp-controller="Registration" asp-route-id="@c.Id"> Delete
+                            </a>
+                        </div>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
