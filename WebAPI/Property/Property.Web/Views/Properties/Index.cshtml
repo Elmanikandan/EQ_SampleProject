@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Properties>
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "All Properties";
+}
+<h2>Properties</h2><br/>
+<a asp-action="AddProperty" class="btn btn-sm btn-primary">Add Property</a>
+<a asp-action="GetProperty" class="btn btn-sm btn-secondary">Get Property</a>
+<br/>
+
+<table class="table table-sm table-striped table-bordered m-2">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>PropertyNumber</th>
+            <th>Address</th>
+            <th>City</th>
+            <th>CostPerSqft</th>
+            <th>NumberOfSqft</th>
+            <th>TotalCost</th>
+            <th>Status</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var property in Model)
+        {
+            <tr>
+                <td>@property.Id</td>
+                <td>@property.PropertyNumber</td>
+                <td>@property.Address</td>
+                <td>@property.City</td>
+                <td>@property.CostPerSqft</td>
+                <td>@property.NumberOfSqft</td>
+                <td>@property.TotalCost</td>
+                <td>@property.Status</td>
+                <td>
+                    <a asp-action="UpdateProperty" asp-route-id="@property.Id">
+                        <img src="~/images/edit.png" />
+                    </a>
+                </td>
+                <td>
+                    <form asp-action="DeleteProperty" method="post">
+                        <input type="hidden" value="@property.Id" name="id"/>
+                        <input type="image" src="~/images/delete.png"/>
+                    </form>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
