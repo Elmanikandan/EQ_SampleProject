@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using Property.Web.Models;
+using System.Text;
+using System;
 
 namespace Property.Web.Controllers
 {
@@ -18,6 +20,20 @@ namespace Property.Web.Controllers
                 }
             }
             return View(propertyList);
+        }
+        public async Task<IActionResult> AddProperty()
+        {
+            return View("Add");
+        }
+
+        public async Task<IActionResult> Create(Properties property)
+        {
+            var json = JsonConvert.SerializeObject(property);
+            var stringContent = new StringContent(json, UnicodeEncoding.UTF8, "application/json"); 
+            var client = new HttpClient();
+            var response = await client.PostAsync("https://localhost:44351/api/Properties", stringContent);
+            
+            return View("Create",property);
         }
     }
 }

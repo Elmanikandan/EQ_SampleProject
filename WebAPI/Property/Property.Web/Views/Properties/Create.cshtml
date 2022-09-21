@@ -1,0 +1,47 @@
+﻿@model Properties
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "Property";
+}
+<h2>Add Property Details</h2>
+<div class="row">
+    <div class="col-md-4">
+        <form method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                @Html.DisplayNameFor(model => model.PropertyNumber)
+            </div>
+            <div class="form-group">
+                @Html.DisplayNameFor(model => model.Address)
+            </div>
+            <div class="form-group">
+                @Html.DisplayNameFor(model => model.City)
+            </div>
+            <div class="form-group">
+                @Html.DisplayNameFor(model => model.Status)
+            </div>
+            <div class="form-group">
+                @Html.DisplayNameFor(model => model.Type)
+            </div>
+            <div class="form-group">
+                @Html.DisplayNameFor(model => model.CostPerSqft)
+            </div>
+            <div class="form-group">
+                @Html.DisplayNameFor(model => model.NumberOfSqft)
+            </div>
+            <div class="form-group">
+                @Html.DisplayNameFor(model => model.TotalCost)
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Add" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    }
