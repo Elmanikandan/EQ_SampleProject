@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using Property.Web.Models;
 using Property.Web.Services.Base;
+using System.Net;
 
 namespace Property.Web.Services
 {
@@ -20,8 +21,12 @@ namespace Property.Web.Services
             using (var client = new HttpClient())
             {
                 var httpResponse = await client.PostAsJsonAsync<RegistrationModel>(registrationApiUrl, registration);
-                var result = await httpResponse.Content.ReadAsStringAsync();
-                response = JsonConvert.DeserializeObject<ApiResponseModel<RegistrationModel>>(result);
+                if (httpResponse.StatusCode == HttpStatusCode.OK)
+                {
+                    var result = await httpResponse.Content.ReadAsStringAsync();
+                    var reponseData = JsonConvert.DeserializeObject<RegistrationModel>(result);
+                    response = new ApiResponseModel<RegistrationModel> { ResponseCode = HttpStatusCode.Created, Message = registration.Type + " created successfully", Record = reponseData };
+                }                
             }
             return response;
         }
@@ -44,7 +49,15 @@ namespace Property.Web.Services
             ApiResponseModel<IEnumerable<RegistrationModel>> response = null;
             using (var client = new HttpClient())
             {
-                response = await client.GetFromJsonAsync<ApiResponseModel<IEnumerable<RegistrationModel>>>(registrationApiUrl);
+                var httpResponse = await client.GetAsync(registrationApiUrl);
+                var result = await httpResponse.Content.ReadAsStringAsync();
+               var data = JsonConvert.DeserializeObject<List<RegistrationModel>>(result);
+                if (data != null && data.Count > 0)
+                {
+                    response = new ApiResponseModel<IEnumerable<RegistrationModel>> { ResponseCode = HttpStatusCode.Found, Message = "Records found", Record = data.ToList<RegistrationModel>() };
+                }
+                //response = await client.GetFromJsonAsync<ApiResponseModel<IEnumerable<RegistrationModel>>>(registrationApiUrl);
+                
             }
             return response;
         }
@@ -55,7 +68,14 @@ namespace Property.Web.Services
             ApiResponseModel<RegistrationModel> response = null;
             using (var client = new HttpClient())
             {
-                response = await client.GetFromJsonAsync<ApiResponseModel<RegistrationModel>>(url);
+                //response = await client.GetFromJsonAsync<ApiResponseModel<RegistrationModel>>(url);
+                var httpResponse = await client.GetAsync(url);
+                if (httpResponse.StatusCode == HttpStatusCode.OK)
+                {
+                    var result = await httpResponse.Content.ReadAsStringAsync();
+                    var reponseData = JsonConvert.DeserializeObject<RegistrationModel>(result);
+                    response = new ApiResponseModel<RegistrationModel> { ResponseCode = HttpStatusCode.Found, Message = "Data are found.", Record = reponseData };
+                }
             }
             return response;
         }
