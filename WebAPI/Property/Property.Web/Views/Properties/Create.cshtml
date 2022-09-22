@@ -1,0 +1,91 @@
+﻿@using Property.Web.ViewModels
+@model PropertiesVM
+@if (Model != null && Model.Properties.Id > 0)
+{
+    ViewData["Title"] = "Edit";
+}
+else
+{
+    ViewData["Title"] = "Create";
+}
+
+<form method="post">
+    <div class="border p-3 mt-4 row">
+        <div class="row pb-2">
+            @if (Model != null && Model.Properties.Id > 0)
+            {
+                <h2 class="text-primary">Edit Property</h2>
+            }
+            else
+            {
+                <h2 class="text-primary">Add Property</h2>
+            }
+        </div>
+        @*<div class="" asp-validation-summary="All"></div>*@
+        <div class="mb-3 col-6">
+            <label asp-for="Properties.PropertyNumber"></label>
+            <input asp-for="Properties.PropertyNumber" class="form-control" />
+            <span asp-validation-for="Properties.PropertyNumber" class="text-danger"></span>
+        </div>
+        <div class="mb-3 col-6">
+            <label asp-for="Properties.Address"></label>
+            <input asp-for="Properties.Address" class="form-control" />
+            <span asp-validation-for="Properties.Address" class="text-danger"></span>
+        </div>
+        <div class="mb-3 col-6">
+            <label asp-for="Properties.City"></label>
+            <input asp-for="Properties.City" class="form-control" />
+            <span asp-validation-for="Properties.City" class="text-danger"></span>
+        </div>
+        <div class="mb-3 col-6">
+            <label asp-for="Properties.NumberOfSqft"></label>
+            <input asp-for="Properties.NumberOfSqft" class="form-control" />
+            <span asp-validation-for="Properties.NumberOfSqft" class="text-danger"></span>
+        </div>
+        <div class="mb-3 col-6">
+            <label asp-for="Properties.CostPerSqft"></label>
+            <input asp-for="Properties.CostPerSqft" class="form-control" />
+            <span asp-validation-for="Properties.CostPerSqft" class="text-danger"></span>
+        </div>
+        <div class="mb-3 col-6">
+            <label asp-for="Properties.TotalCost"></label>
+            <input asp-for="Properties.TotalCost" class="form-control" />
+            <span asp-validation-for="Properties.TotalCost" class="text-danger"></span>
+        </div>
+        <div class="mb-3 col-6">
+            <label asp-for="Properties.Type"></label>
+            <select asp-for="Properties.Type" class="form-control" asp-items="Model.Type">
+                <option disabled selected>--select--</option>
+            </select>
+            <span asp-validation-for="Properties.Type" class="text-danger"></span>
+        </div>
+        <div class="mb-3 col-6">
+            <label asp-for="Properties.Status"></label>
+            <select asp-for="Properties.Status" class="form-control" asp-items="Model.Status">
+                <option disabled selected>--select--</option>
+            </select>
+            <span asp-validation-for="Properties.Status" class="text-danger"></span>
+        </div>
+
+        @if (Model != null && Model.Properties.Id > 0)
+        {
+            <button class="btn btn-primary" style="width:150px">
+                Update
+            </button>
+        }
+        else
+        {
+            <button class="btn btn-primary" style="width:150px">
+                Create
+            </button>
+        }
+        &nbsp;&nbsp;
+        <a asp-action="Index" asp-controller="Properties" class="btn btn-secondary" style="width:150px">Back To List</a>
+    </div>
+</form>
+
+@section Scripts{
+    @{
+    <partial name="_ValidationScriptsPartial" />
+    }
+}

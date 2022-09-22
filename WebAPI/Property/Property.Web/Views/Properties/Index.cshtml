@@ -3,12 +3,23 @@
     Layout = "_Layout";
     ViewBag.Title = "All Properties";
 }
-<h2>Properties</h2><br/>
-<a asp-action="AddProperty" class="btn btn-sm btn-primary">Add Property</a>
-<a asp-action="GetProperty" class="btn btn-sm btn-secondary">Get Property</a>
-<br/>
 
-<table class="table table-sm table-striped table-bordered m-2">
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Property List</h2>
+        </div>
+        <div class="col-6 text-end">
+            <a class="btn btn-primary" asp-controller="Properties" asp-action="Create">
+                <i class="bi bi-plus-circle-fill"></i>&nbsp;&nbsp;Create New
+            </a>
+        </div>
+    </div>
+
+    <br />
+    <br />
+
+    <table class="table table-bordered table-striped">
     <thead>
         <tr>
             <th>ID</th>
@@ -36,12 +47,12 @@
                 <td>@property.TotalCost</td>
                 <td>@property.Status</td>
                 <td>
-                    <a asp-action="UpdateProperty" asp-route-id="@property.Id">
+                    <a asp-action="Edit" asp-route-id="@property.Id">
                         <img src="~/images/edit.png" />
                     </a>
                 </td>
                 <td>
-                    <form asp-action="DeleteProperty" method="post">
+                    <form asp-action="Delete" method="post">
                         <input type="hidden" value="@property.Id" name="id"/>
                         <input type="image" src="~/images/delete.png"/>
                     </form>
@@ -50,3 +61,4 @@
         }
     </tbody>
 </table>
+</div>
