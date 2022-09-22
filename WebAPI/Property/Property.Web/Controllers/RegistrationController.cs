@@ -71,6 +71,7 @@ namespace Property.Web.Controllers
                 }
             }
         }
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(RegistrationModel registration)
@@ -98,6 +99,7 @@ namespace Property.Web.Controllers
             var response = await unitOfWork.RegistrationService.GetAllAsync();
             return Json(new { data = response.Record });
         }
+
         [HttpDelete]
         public async Task<IActionResult> DeleteRecord(int id)
         {

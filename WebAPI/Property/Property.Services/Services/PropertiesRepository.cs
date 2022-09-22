@@ -14,8 +14,9 @@ namespace Property.Services.Services
         }
 
         public void Update(Properties user)
-        {
-            _db.Properties.Update(user);
+        {           
+            //_db.Properties.Update(user);
+            _db.Set<Properties>().Update(user);
         }
     }
 }

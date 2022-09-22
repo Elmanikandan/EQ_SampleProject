@@ -10,6 +10,6 @@
         public string Type { get; set; }
         public Decimal CostPerSqft { get; set; }
         public Decimal NumberOfSqft { get; set; }
-        public Decimal TotalCost { get; set; }
+        public Decimal? TotalCost { get; set; }
     }
 }

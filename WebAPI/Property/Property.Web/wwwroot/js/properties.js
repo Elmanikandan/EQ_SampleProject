@@ -6,26 +6,28 @@ $(document).ready(function () {
 
 function loadDataTable() {
 
-    dataTbl = $('#tblRegistrationData').DataTable({
+    dataTbl = $('#tblProperties').DataTable({
         "ajax": {
-            "url": "/Registration/GetAll"
+            "url": "/Properties/GetAll"
         },
         "columns": [
-            { "data": "name", "width": "15%" },
+            { "data": "propertyNumber", "width": "20%" },
             { "data": "address", "width": "15%" },
             { "data": "city", "width": "15%" },
-            { "data": "mobileNumber", "width": "15%" },
-            { "data": "email", "width": "15%" },
+            { "data": "costPerSqft", "width": "18%" },
+            { "data": "numberOfSqft", "width": "18%" },
+            { "data": "totalCost", "width": "15%" },
             { "data": "type", "width": "15%" },
+            { "data": "status", "width": "15%" },
             {
                 "data": "id",
                 "render": function (data) {
                     return `
                          <div class="w-75 btn-group" role="group">
-                            <a class="btn btn-primary mx-2" href="/Registration/Edit?id=${data}">
+                            <a class="btn btn-primary mx-2" href="/Properties/Edit?id=${data}">
                                 <i class="bi bi-pencil-square"></i>
                             </a>
-                            <a class="btn btn-danger mx-2" onclick=deleteProduct('/Registration/DeleteRecord/${data}')>
+                            <a class="btn btn-danger mx-2" onclick=deleteProperty('/Properties/Delete/${data}')>
                                 <i class="bi bi-trash-fill"></i>
                             </a>
                         </div>
@@ -35,7 +37,7 @@ function loadDataTable() {
         ]
     })
 }
-function deleteProduct(url) {
+function deleteProperty(url) {
     Swal.fire({
         title: 'Are you sure?',
         text: "You won't be able to revert this!",

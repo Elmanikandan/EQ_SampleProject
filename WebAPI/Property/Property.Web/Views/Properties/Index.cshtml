@@ -19,46 +19,24 @@
     <br />
     <br />
 
-    <table class="table table-bordered table-striped">
+    <table class="table table-bordered table-striped" id="tblProperties">
     <thead>
         <tr>
-            <th>ID</th>
-            <th>PropertyNumber</th>
+            <th>Property No</th>
             <th>Address</th>
             <th>City</th>
-            <th>CostPerSqft</th>
-            <th>NumberOfSqft</th>
-            <th>TotalCost</th>
+            <th>Cost/Sqft</th>
+            <th>No of Sqft</th>
+            <th>Total Cost</th>
+            <th>Type</th>
             <th>Status</th>
-            <th>Edit</th>
-            <th>Delete</th>
+            <th>Action</th>
         </tr>
     </thead>
-    <tbody>
-        @foreach(var property in Model)
-        {
-            <tr>
-                <td>@property.Id</td>
-                <td>@property.PropertyNumber</td>
-                <td>@property.Address</td>
-                <td>@property.City</td>
-                <td>@property.CostPerSqft</td>
-                <td>@property.NumberOfSqft</td>
-                <td>@property.TotalCost</td>
-                <td>@property.Status</td>
-                <td>
-                    <a asp-action="Edit" asp-route-id="@property.Id">
-                        <img src="~/images/edit.png" />
-                    </a>
-                </td>
-                <td>
-                    <form asp-action="Delete" method="post">
-                        <input type="hidden" value="@property.Id" name="id"/>
-                        <input type="image" src="~/images/delete.png"/>
-                    </form>
-                </td>
-            </tr>
-        }
-    </tbody>
+
 </table>
 </div>
+
+@section Scripts{
+    <script src="~/js/properties.js"></script>
+}

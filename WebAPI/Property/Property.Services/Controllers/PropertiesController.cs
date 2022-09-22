@@ -38,7 +38,7 @@ namespace Property.Services.Controllers
         }
 
         [HttpPut]
-        public Properties Update([FromForm] Properties registration)
+        public async Task<Properties> Edit([FromBody] Properties registration)
         {
             _unitOfWork.Properties.Update(registration);
             _unitOfWork.Save();
@@ -46,11 +46,12 @@ namespace Property.Services.Controllers
         }
 
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public Properties Delete(int id)
         {
             var obj = _unitOfWork.Properties.GetFirstOrDefault(u => u.Id == id);
             _unitOfWork.Properties.Remove(obj);
             _unitOfWork.Save();
+            return obj;
         }
     }
 }

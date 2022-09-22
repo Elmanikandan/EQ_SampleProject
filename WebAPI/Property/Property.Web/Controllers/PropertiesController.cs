@@ -59,7 +59,6 @@ namespace Property.Web.Controllers
                 var response = await unitOfWork.PropertiesService.GetAsync(id.Value);
                 if (response.ResponseCode == System.Net.HttpStatusCode.Found)
                 {
-                    TempData["success"] = response.Message;
                     PropertiesVM propertyView = new PropertiesVM();
                     propertyView.Properties = response.Record;
                     return View("Create", propertyView);
@@ -80,10 +79,8 @@ namespace Property.Web.Controllers
             {
                 return View(properties);
             }
-
-            //var response = await _categoryHttpService.UpdateAsync(category);
             var response = await unitOfWork.PropertiesService.UpdateAsync(properties);
-            if (response.ResponseCode == System.Net.HttpStatusCode.Created)
+            if (response.ResponseCode == System.Net.HttpStatusCode.OK)
             {
                 TempData["success"] = response.Message;
                 return RedirectToAction("Index");
@@ -100,6 +97,26 @@ namespace Property.Web.Controllers
         {
             var response = await unitOfWork.PropertiesService.GetAllAsync();
             return Json(new { data = response.Record });
+        }
+
+        [HttpDelete]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var result = await unitOfWork.PropertiesService.GetAsync(id);
+            if (result == null || result.Record == null)
+            {
+                return Json(new { success = false, message = result.Message });
+            }
+            var response = await unitOfWork.PropertiesService.DeleteAsync(id);
+            if (response.ResponseCode == System.Net.HttpStatusCode.OK)
+            {
+                return Json(new { success = true, message = response.Message });
+            }
+            else
+            {
+                return Json(new { success = false, message = response.Message });
+            }
+
         }
     }
 }

@@ -39,7 +39,8 @@ namespace Property.Web.Services
             {
                 var httpResponse = await client.DeleteAsync(url);
                 var result = await httpResponse.Content.ReadAsStringAsync();
-                response = JsonConvert.DeserializeObject<ApiResponseModel<Properties>>(result);
+                var responseData = JsonConvert.DeserializeObject<Properties>(result);
+                response = new ApiResponseModel<Properties> { ResponseCode = HttpStatusCode.OK, Message = "Property deleted successfully", Record = responseData };
             }
             return response;
         }
@@ -55,9 +56,7 @@ namespace Property.Web.Services
                 if (data != null && data.Count > 0)
                 {
                     response = new ApiResponseModel<IEnumerable<Properties>> { ResponseCode = HttpStatusCode.Found, Message = "Records found", Record = data.ToList<Properties>() };
-                }
-                //response = await client.GetFromJsonAsync<ApiResponseModel<IEnumerable<RegistrationModel>>>(registrationApiUrl);
-
+                }               
             }
             return response;
         }
@@ -68,26 +67,26 @@ namespace Property.Web.Services
             ApiResponseModel<Properties> response = null;
             using (var client = new HttpClient())
             {
-                //response = await client.GetFromJsonAsync<ApiResponseModel<RegistrationModel>>(url);
                 var httpResponse = await client.GetAsync(url);
                 if (httpResponse.StatusCode == HttpStatusCode.OK)
                 {
                     var result = await httpResponse.Content.ReadAsStringAsync();
                     var reponseData = JsonConvert.DeserializeObject<Properties>(result);
-                    response = new ApiResponseModel<Properties> { ResponseCode = HttpStatusCode.Found, Message = "Data are found.", Record = reponseData };
+                    response = new ApiResponseModel<Properties> { ResponseCode = HttpStatusCode.Found, Message = "Data was found.", Record = reponseData };
                 }
             }
             return response;
         }
 
-        public async Task<ApiResponseModel<Properties>> UpdateAsync(Properties Properties)
+        public async Task<ApiResponseModel<Properties>> UpdateAsync(Properties properties)
         {
             ApiResponseModel<Properties> response = null;
             using (var client = new HttpClient())
             {
-                var httpResponse = await client.PutAsJsonAsync<Properties>(propertyApiUrl, Properties);
+                //var res = JsonConvert.SerializeObject(properties);
+                var httpResponse = await client.PutAsJsonAsync<Properties>(propertyApiUrl, properties);
                 var result = await httpResponse.Content.ReadAsStringAsync();
-                response = JsonConvert.DeserializeObject<ApiResponseModel<Properties>>(result);
+                response = new ApiResponseModel<Properties> { ResponseCode = HttpStatusCode.OK, Message = "Property -" + properties.PropertyNumber + " updated successfully", Record = properties };
             }
             return response;
         }
