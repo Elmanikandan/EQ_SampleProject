@@ -10,6 +10,7 @@ else
 }
 
 <form method="post">
+
     <div class="border p-3 mt-4 row">
         <div class="row pb-2">
             @if (Model != null && Model.Registration.Id > 0)
@@ -22,6 +23,8 @@ else
             }
         </div>
         @*<div class="" asp-validation-summary="All"></div>*@
+            <input asp-for="Registration.Id" hidden />
+
         <div class="mb-3 col-6">
             <label asp-for="Registration.Name"></label>
             <input asp-for="Registration.Name" class="form-control" />

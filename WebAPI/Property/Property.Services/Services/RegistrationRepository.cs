@@ -17,7 +17,8 @@ namespace Property.Services.Services
 
         public void Update(Registration user)
         {
-            _db.Registration.Update(user);
+           // _db.Registration.Update(user);
+            _db.Set<Registration>().Update(user);           
         }
 
     }
