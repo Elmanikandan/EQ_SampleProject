@@ -74,6 +74,10 @@ namespace Property.Web.Services
                     var reponseData = JsonConvert.DeserializeObject<Properties>(result);
                     response = new ApiResponseModel<Properties> { ResponseCode = HttpStatusCode.Found, Message = "Data was found.", Record = reponseData };
                 }
+                else
+                {
+                    response = new ApiResponseModel<Properties> { ResponseCode = HttpStatusCode.NotFound, Message = "No record found", Record = new Properties() };
+                }
             }
             return response;
         }
@@ -85,8 +89,11 @@ namespace Property.Web.Services
             {
                 //var res = JsonConvert.SerializeObject(properties);
                 var httpResponse = await client.PutAsJsonAsync<Properties>(propertyApiUrl, properties);
-                var result = await httpResponse.Content.ReadAsStringAsync();
-                response = new ApiResponseModel<Properties> { ResponseCode = HttpStatusCode.OK, Message = "Property -" + properties.PropertyNumber + " updated successfully", Record = properties };
+                if (httpResponse.StatusCode == HttpStatusCode.OK)
+                {
+                    var result = await httpResponse.Content.ReadAsStringAsync();
+                    response = new ApiResponseModel<Properties> { ResponseCode = HttpStatusCode.OK, Message = "Property -" + properties.PropertyNumber + " updated successfully", Record = properties };
+                }
             }
             return response;
         }

@@ -13,7 +13,7 @@ namespace Property.Web.Services
         public OccupancyHttpservice(IOptions<ApiUrls> apiUrls)
         {
             this.apiUrls = apiUrls;
-            occupancyApiUrl = apiUrls.Value.PropertiesApiUrl;
+            occupancyApiUrl = apiUrls.Value.OccupancyApiUrl;
         }
 
         public Task<ApiResponseModel<Occupancy>> AddAsync(Occupancy modelType)

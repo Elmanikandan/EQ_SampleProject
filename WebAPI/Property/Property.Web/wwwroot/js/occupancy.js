@@ -6,14 +6,14 @@ $(document).ready(function () {
 
 function loadDataTable() {
     debugger;
-    dataTbl = $('#tblOcupancy').DataTable({
+    dataTbl = $('#tblOccupancy').DataTable({
         "ajax": {
             "url": "/Occupancy/GetAll"
         },
         "columns": [
-            { "data": "customerId", "width": "20%" },
-            { "data": "ownerId", "width": "15%" },           
-            { "data": "occupiedBy", "width": "15%" },
+            { "data": "customerName", "width": "20%" },
+            { "data": "ownerName", "width": "15%" },           
+            { "data": "propertyNumber", "width": "15%" },
             { "data": "occupiedOn", "width": "15%" }            
         ]
     })

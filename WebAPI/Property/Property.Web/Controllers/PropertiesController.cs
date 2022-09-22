@@ -19,6 +19,13 @@ namespace Property.Web.Controllers
             var result = await unitOfWork.PropertiesService.GetAllAsync();
             return View(result.Record);
         }
+
+        public async Task<IActionResult> LoadProperty()
+        {
+            var result = await unitOfWork.PropertiesService.GetAllAsync();
+            return View(result.Record);
+        }
+
         [HttpGet]
         public async Task<IActionResult> Create()
         {
@@ -73,7 +80,19 @@ namespace Property.Web.Controllers
                 if (response.ResponseCode == System.Net.HttpStatusCode.Found)
                 {
                     PropertiesVM propertyView = new PropertiesVM();
-                    propertyView.Properties = response.Record;
+                    propertyView.Properties = response.Record;                
+                   
+                    var result = await unitOfWork.RegistrationService.GetAllAsync();
+                    var ownerList = result.Record.Where(x => x.Type == "Owner").ToList();
+                    List<SelectListItem> item = new List<SelectListItem>();
+                    foreach (var owner in ownerList)
+                    {
+                        SelectListItem lst = new SelectListItem();
+                        lst.Text = owner.Name;
+                        lst.Value = owner.Name;
+                        item.Add(lst);
+                    }
+                    propertyView.Owner = item;
                     return View("Create", propertyView);
                 }
                 else

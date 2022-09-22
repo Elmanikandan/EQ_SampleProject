@@ -22,7 +22,7 @@ function loadDataTable() {
                 "render": function (data) {
                     return `
                          <div class="w-75 btn-group" role="group">
-                            <a class="btn btn-primary mx-2" href="/Registration/Edit?id=${data}">
+                            <a class="btn btn-dark mx-2" href="/Registration/Edit?id=${data}">
                                 <i class="bi bi-pencil-square"></i>
                             </a>
                             <a class="btn btn-danger mx-2" onclick=deleteProduct('/Registration/DeleteRecord/${data}')>
