@@ -38,7 +38,7 @@ namespace Property.Services.Controllers
         }
 
         [HttpPut]
-        public Registration Update([FromForm] Registration registration)
+        public async Task<Registration> Edit([FromBody] Registration registration)
         {
             _unitOfWork.Registration.Update(registration);
             _unitOfWork.Save();
@@ -46,11 +46,12 @@ namespace Property.Services.Controllers
         }
 
         [HttpDelete("{id}")]
-        public void Delete(int id)
+        public Registration Delete(int id)
         {
             var obj = _unitOfWork.Registration.GetFirstOrDefault(u=>u.Id == id);
             _unitOfWork.Registration.Remove(obj);
             _unitOfWork.Save();
+            return obj;
         }
     }
 }
