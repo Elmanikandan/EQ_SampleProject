@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.AspNetCore.Mvc.Rendering;
 using Newtonsoft.Json;
 using Property.Web.Models;
 using Property.Web.Services.Base;
@@ -19,10 +20,22 @@ namespace Property.Web.Controllers
             return View(result.Record);
         }
         [HttpGet]
-        public IActionResult Create()
+        public async Task<IActionResult> Create()
         {
             PropertiesVM propertyView = new PropertiesVM();
             propertyView.Properties = new Properties();
+            var result = await unitOfWork.RegistrationService.GetAllAsync();
+            var ownerList = result.Record.Where(x=> x.Type == "Owner").ToList();
+            List<SelectListItem> item = new List<SelectListItem>();
+            foreach(var owner in ownerList)
+            {
+                SelectListItem lst = new SelectListItem();
+                lst.Text = owner.Name;
+                lst.Value = owner.Name;
+                item.Add(lst);
+            }
+            propertyView.Owner = item;
+
             return View(propertyView);
         }
         [HttpPost]

@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Occupancy>
+@{
+    Layout = "_Layout";
+    ViewBag.Title = "All Occupancy";
+}
+
+<div class="container p-3">
+    <div class="row pt-4">
+        <div class="col-6">
+            <h2 class="text-primary">Occupancy List</h2>
+        </div>        
+    </div>
+
+    <br />
+    <br />
+
+    <table class="table table-bordered table-striped" id="tblOccupancy">
+    <thead>
+        <tr>
+            <th>Customer</th>
+            <th>Owner</th>
+            <th>Occupied By</th>
+            <th>Occupied On</th>            
+        </tr>
+    </thead>
+</table>
+</div>
+
+@section Scripts{
+    <script src="~/js/occupancy.js"></script>
+}

@@ -17,6 +17,8 @@ namespace Property.Services.Models
         [Required]
         public string Type { get; set; }
         [Required]
+        public string Owner { get; set; }
+        [Required]
         public Decimal CostPerSqft { get; set; }
         [Required]
         public Decimal NumberOfSqft { get; set; }

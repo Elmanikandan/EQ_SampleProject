@@ -4,6 +4,7 @@
     {
         IRegistrationRepository Registration { get; }
         IPropertiesRepository Properties { get; }
+        IOccupancyRepository Occupancy { get; }
 
         void Save();
     }

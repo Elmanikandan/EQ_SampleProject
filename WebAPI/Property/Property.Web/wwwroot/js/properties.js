@@ -18,6 +18,7 @@ function loadDataTable() {
             { "data": "numberOfSqft", "width": "18%" },
             { "data": "totalCost", "width": "15%" },
             { "data": "type", "width": "15%" },
+            { "data": "owner", "width": "15%" },
             { "data": "status", "width": "15%" },
             {
                 "data": "id",

@@ -9,9 +9,11 @@ namespace Property.Web.Services.Base
         {
             RegistrationService = new RegistrationHttpservice(apiUrls);
             PropertiesService = new PropertyHttpservice(apiUrls);
+            OccupancyService = new OccupancyHttpservice(apiUrls);
         }
         public IApiService<RegistrationModel> RegistrationService { get; private set; }
         public IApiService<Properties> PropertiesService { get; private set; }
+        public IApiService<Occupancy> OccupancyService { get; private set; }
 
     }
 }

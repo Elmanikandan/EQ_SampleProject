@@ -6,5 +6,6 @@ namespace Property.Web.Services.Base
     {
         IApiService<RegistrationModel> RegistrationService { get; }
         IApiService<Properties> PropertiesService { get; }
+        IApiService<Occupancy> OccupancyService { get; }
     }
 }

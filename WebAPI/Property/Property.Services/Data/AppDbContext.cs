@@ -9,7 +9,8 @@ namespace Property.Services.Data
         {
         }
         public DbSet<Registration> Registration { get; set; }
-        public DbSet<Properties> Properties { get; set; }   
+        public DbSet<Properties> Properties { get; set; }
+        public DbSet<Occupancy> Occupancny { get; set; }
 
     }
 }

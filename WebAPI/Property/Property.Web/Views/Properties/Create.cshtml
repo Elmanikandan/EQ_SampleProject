@@ -62,11 +62,21 @@ else
             <span asp-validation-for="Properties.Type" class="text-danger"></span>
         </div>
         <div class="mb-3 col-6">
+            <label asp-for="Properties.Owner"></label>
+            <select asp-for="Properties.Owner" class="form-control" asp-items="Model.Owner">
+                <option disabled selected>--select--</option>
+            </select>
+            <span asp-validation-for="Properties.Owner" class="text-danger"></span>
+        </div>
+        <div class="mb-3 col-6">
             <label asp-for="Properties.Status"></label>
             <select asp-for="Properties.Status" class="form-control" asp-items="Model.Status">
                 <option disabled selected>--select--</option>
             </select>
             <span asp-validation-for="Properties.Status" class="text-danger"></span>
+        </div>
+        <div class="mb-3 col-6">
+
         </div>
 
         @if (Model != null && Model.Properties.Id > 0)

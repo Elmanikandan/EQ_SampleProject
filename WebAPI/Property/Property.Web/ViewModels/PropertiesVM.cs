@@ -16,5 +16,7 @@ namespace Property.Web.ViewModels
             new SelectListItem { Value = "Available", Text = "Available" },
             new SelectListItem { Value = "Sold", Text = "Sold" }
         };
+
+        public List<SelectListItem> Owner { get; set; }
     }
 }
