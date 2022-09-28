@@ -1,0 +1,14 @@
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Domain\obj\Debug\net6.0\StudentRegistration.Domain.csproj.AssemblyReference.cache
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Domain\obj\Debug\net6.0\StudentRegistration.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Domain\obj\Debug\net6.0\StudentRegistration.Domain.AssemblyInfoInputs.cache
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Domain\obj\Debug\net6.0\StudentRegistration.Domain.AssemblyInfo.cs
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Domain\obj\Debug\net6.0\StudentRegistration.Domain.csproj.CoreCompileInputs.cache
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Domain\bin\Debug\net6.0\StudentRegistration.Domain.deps.json
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Domain\bin\Debug\net6.0\StudentRegistration.Domain.runtimeconfig.json
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Domain\bin\Debug\net6.0\StudentRegistration.Domain.dll
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Domain\bin\Debug\net6.0\StudentRegistration.Domain.pdb
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Domain\obj\Debug\net6.0\StudentRegistration.Domain.dll
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Domain\obj\Debug\net6.0\refint\StudentRegistration.Domain.dll
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Domain\obj\Debug\net6.0\StudentRegistration.Domain.pdb
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Domain\obj\Debug\net6.0\StudentRegistration.Domain.genruntimeconfig.cache
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Domain\obj\Debug\net6.0\ref\StudentRegistration.Domain.dll

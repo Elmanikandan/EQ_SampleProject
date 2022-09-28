@@ -1,0 +1,15 @@
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\bin\Debug\net6.0\StudentRegistration.Repository.deps.json
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\bin\Debug\net6.0\StudentRegistration.Repository.dll
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\bin\Debug\net6.0\StudentRegistration.Repository.pdb
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\bin\Debug\net6.0\StudentRegistration.Domain.dll
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\bin\Debug\net6.0\StudentRegistration.Domain.pdb
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\obj\Debug\net6.0\StudentRegistration.Repository.csproj.AssemblyReference.cache
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\obj\Debug\net6.0\StudentRegistration.Repository.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\obj\Debug\net6.0\StudentRegistration.Repository.AssemblyInfoInputs.cache
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\obj\Debug\net6.0\StudentRegistration.Repository.AssemblyInfo.cs
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\obj\Debug\net6.0\StudentRegistration.Repository.csproj.CoreCompileInputs.cache
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\obj\Debug\net6.0\StudentRegistration.Repository.csproj.CopyComplete
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\obj\Debug\net6.0\StudentRegistration.Repository.dll
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\obj\Debug\net6.0\refint\StudentRegistration.Repository.dll
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\obj\Debug\net6.0\StudentRegistration.Repository.pdb
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Repository\obj\Debug\net6.0\ref\StudentRegistration.Repository.dll
