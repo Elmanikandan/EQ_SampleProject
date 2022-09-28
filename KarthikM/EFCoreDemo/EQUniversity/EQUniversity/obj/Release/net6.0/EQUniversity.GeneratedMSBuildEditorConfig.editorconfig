@@ -1,0 +1,108 @@
+is_global = true
+build_property.TargetFramework = net6.0
+build_property.TargetPlatformMinVersion = 
+build_property.UsingMicrosoftNETSdkWeb = true
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = EQUniversity
+build_property.RootNamespace = EQUniversity
+build_property.ProjectDir = C:\Users\MahendK\Source\Repos\EQ_SampleProject\KarthikM\EFCoreDemo\EQUniversity\EQUniversity\
+build_property.RazorLangVersion = 6.0
+build_property.SupportLocalizedComponentNames = 
+build_property.GenerateRazorMetadataSourceChecksumAttributes = 
+build_property.MSBuildProjectDirectory = C:\Users\MahendK\Source\Repos\EQ_SampleProject\KarthikM\EFCoreDemo\EQUniversity\EQUniversity
+build_property._RazorSourceGeneratorDebug = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/About.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQWJvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Courses/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlc1xDcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Courses/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlc1xEZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Courses/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlc1xEZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Courses/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlc1xFZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Courses/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ291cnNlc1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Error.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcRXJyb3IuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Instructors/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdHJ1Y3RvcnNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Instructors/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdHJ1Y3RvcnNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Instructors/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdHJ1Y3RvcnNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Instructors/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdHJ1Y3RvcnNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Instructors/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcSW5zdHJ1Y3RvcnNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Privacy.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcUHJpdmFjeS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Shared/_ValidationScriptsPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Students/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcQ3JlYXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Students/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcRGVsZXRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Students/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcRGV0YWlscy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Students/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcRWRpdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Students/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU3R1ZGVudHNcSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/_ViewImports.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/_ViewStart.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/MahendK/Source/Repos/EQ_SampleProject/KarthikM/EFCoreDemo/EQUniversity/EQUniversity/Pages/Shared/_Layout.cshtml]
+build_metadata.AdditionalFiles.TargetPath = UGFnZXNcU2hhcmVkXF9MYXlvdXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = b-aax3beqfr4

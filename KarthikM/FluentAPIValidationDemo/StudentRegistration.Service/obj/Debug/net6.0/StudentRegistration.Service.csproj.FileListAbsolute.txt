@@ -1,0 +1,17 @@
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\bin\Debug\net6.0\StudentRegistration.Service.deps.json
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\bin\Debug\net6.0\StudentRegistration.Service.dll
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\bin\Debug\net6.0\StudentRegistration.Service.pdb
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\bin\Debug\net6.0\StudentRegistration.Domain.dll
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\bin\Debug\net6.0\StudentRegistration.Repository.dll
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\bin\Debug\net6.0\StudentRegistration.Repository.pdb
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\bin\Debug\net6.0\StudentRegistration.Domain.pdb
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\obj\Debug\net6.0\StudentRegistration.Service.csproj.AssemblyReference.cache
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\obj\Debug\net6.0\StudentRegistration.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\obj\Debug\net6.0\StudentRegistration.Service.AssemblyInfoInputs.cache
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\obj\Debug\net6.0\StudentRegistration.Service.AssemblyInfo.cs
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\obj\Debug\net6.0\StudentRegistration.Service.csproj.CoreCompileInputs.cache
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\obj\Debug\net6.0\StudentRegistration.Service.csproj.CopyComplete
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\obj\Debug\net6.0\StudentRegistration.Service.dll
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\obj\Debug\net6.0\refint\StudentRegistration.Service.dll
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\obj\Debug\net6.0\StudentRegistration.Service.pdb
+C:\Users\MahendK\source\repos\OnionArchitechtureDemo\StudentRegistration.Service\obj\Debug\net6.0\ref\StudentRegistration.Service.dll
