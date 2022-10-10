@@ -25,18 +25,42 @@
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Property Management</a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item text-dark" asp-action="Index" asp-controller="Registration">Registration</a>                              
-                                <a class="dropdown-item text-dark" asp-action="Index" asp-controller="Properties">Property</a>
-                                <a class="dropdown-item text-dark" asp-action="Index" asp-controller="Occupancy">Occupancy</a>
-                            </div>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" asp-area="" asp-controller="Properties" asp-action="LoadProperty">Property</a>
-                        </li>
+                        @if (User.IsInRole("Admin"))
+                        {
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Property Management</a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item text-dark" asp-action="Index" asp-controller="Registration">Registration</a>                              
+                                    <a class="dropdown-item text-dark" asp-action="Index" asp-controller="Properties">Property</a>                                    
+                                </div>
+                            </li>
+                        }
+                       
+                        @if ((User.IsInRole("Customer")) || (User.IsInRole("Admin")))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Properties" asp-action="LoadProperty">Property</a>
+                            </li>
+                        }
+                        
+                        @if (User.IsInRole("Owner"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Properties" asp-action="Index">Property</a>                                
+                            </li>
+                        }
+                        
+                        @if (User.IsInRole("User") || User.IsInRole("Admin") || User.IsInRole("Owner") || User.IsInRole("Customer"))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-area="" asp-controller="Occupancy" asp-action="Index">Occupancy</a>                                
+                            </li>
+                        }
+                        
+                        
+
                     </ul>
+                    <partial name="_LoginPartial" />
                 </div>
             </div>
         </nav>
